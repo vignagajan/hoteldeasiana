@@ -7,15 +7,15 @@
   <title>Hotel De Asiana | <?php echo $page?></title>
 
   <!-- Latest compiled and minified CSS -->
-  <link rel="stylesheet" href="assets/styles/bootstrap.min.css">
+  <link rel="stylesheet" href="../assets/styles/bootstrap.min.css">
 
-  <link rel="stylesheet" type="text/css" href="assets/styles/datatables.min.css" />
+  <link rel="stylesheet" type="text/css" href="../assets/styles/datatables.min.css" />
 
   <!-- jQuery library -->
-  <script src="assets/scripts/jquery.min.js"></script>
+  <script src="../assets/scripts/jquery.min.js"></script>
   <!-- Popper JS -->
-  <script src="assets/scripts/popper.min.js"></script>
+  <script src="../assets/scripts/popper.min.js"></script>
   <!-- Latest compiled JavaScript -->
-  <script src="assets/scripts/bootstrap.min.js"></script>
+  <script src="../assets/scripts/bootstrap.min.js"></script>
 
 </head>
