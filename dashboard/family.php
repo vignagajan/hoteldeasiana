@@ -18,7 +18,7 @@ if(!isset($_SESSION['username']))
 
 <body id="body-pd">
 
-<script src="../assets/js/main.js"></script>
+<?php include 'nav-bar.php' ;?>
 
 <div class="container-fluid">
   <div class="row justify-content-center">

@@ -7,7 +7,12 @@
 		die();   
 	}
 	$user = $_SESSION['username'];
-	echo "Welcome $user!";
+	
 ?>
 
-<a href="../logout.php">Logout</a>
+<body id="body-pd">
+	<?php include 'nav-bar.php' ;?>
+	<div class="container-fluid">
+		<h1><?php echo "Welcome $user!";?></h1>
+	</div>
+</body>
