@@ -7,7 +7,8 @@
 		die();   
 	}
 	$user = $_SESSION['username'];
-	
+	$page = 'Dashboard';
+	include 'header.php';
 ?>
 
 <body id="body-pd">

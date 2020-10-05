@@ -12,11 +12,11 @@
 <html lang="en">
 
 <?php 
-  $page = 'Individual';
-  include 'header.php' ;?>
+  $table = 'Individual';
+  include 'index.php' ;
+?>
+
 <body id="body-pd">
-  
-  <?php include 'nav-bar.php' ;?>
 
   <div class="container-fluid">
     <div class="row justify-content-center">
@@ -51,19 +51,15 @@
           </div>
 		  <div class="form-group">
 			<label>Individual's Gender : &nbsp; &nbsp;</label>
-			<div class="form-check">
-			  <input class="form-check-input" type="radio" name="gender" value="M" checked="">
-			  <label class="form-check-label" for="gender" >Male</label>
+      <div class="form-check">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="M" checked="">
+			  <label class="form-check-label" for="fh_gender" >Male &emsp;&emsp;</label>
+			  <input class="form-check-input" type="radio" name="fh_gender" value="F">
+			  <label class="form-check-label" for="fh_gender">Female &emsp;&emsp;</label>
+			  <input class="form-check-input" type="radio" name="fh_gender" value="O">
+			  <label class="form-check-label" for="fh_gender">Other</label>
 			</div>
-			<div class="form-check ">
-			  <input class="form-check-input" type="radio" name="gender" value="F">
-			  <label class="form-check-label" for="gender">Female</label>
-			</div>
-			<div class="form-check ">
-			  <input class="form-check-input" type="radio" name="gender" value="O">
-			  <label class="form-check-label" for="gender">Other</label>
-			</div>
-          </div>
+      </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkin Date : &nbsp; </label>
 			  <div class = "col-12">

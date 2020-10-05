@@ -12,13 +12,11 @@ if(!isset($_SESSION['username']))
 <html lang="en">
 
 <?php 
-  $page = 'Family';
-  include 'header.php';
+  $table = 'Family';
+  include 'index.php';
 ?>
 
 <body id="body-pd">
-
-<?php include 'nav-bar.php' ;?>
 
 <div class="container-fluid">
   <div class="row justify-content-center">
@@ -43,7 +41,7 @@ if(!isset($_SESSION['username']))
 
 		
 		<!-- Form Start -->
-    <form action="family_action.php" method="post" enctype="multipart/form-data">
+    <form action="actions/family_action.php" method="post" enctype="multipart/form-data">
       <input type="hidden" name="g_id" value="<?= $g_id; ?>">
       <div class="form-group">
         <input type="text" name="fh_nic" value="<?= $fh_nic; ?>" class="form-control" placeholder="Enter Family Head's NIC" required>
@@ -55,13 +53,9 @@ if(!isset($_SESSION['username']))
 			<label>Family Head's Gender : &nbsp; &nbsp;</label>
 			<div class="form-check">
 			  <input class="form-check-input" type="radio" name="fh_gender" value="M" checked="">
-			  <label class="form-check-label" for="fh_gender" >Male</label>
-			</div>
-			<div class="form-check ">
+			  <label class="form-check-label" for="fh_gender" >Male &emsp;&emsp;</label>
 			  <input class="form-check-input" type="radio" name="fh_gender" value="F">
-			  <label class="form-check-label" for="fh_gender">Female</label>
-			</div>
-			<div class="form-check ">
+			  <label class="form-check-label" for="fh_gender">Female &emsp;&emsp;</label>
 			  <input class="form-check-input" type="radio" name="fh_gender" value="O">
 			  <label class="form-check-label" for="fh_gender">Other</label>
 			</div>
@@ -69,13 +63,13 @@ if(!isset($_SESSION['username']))
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkin Date : &nbsp; </label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cin_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cin_date" value="<?=$cin_date; ?>" required >
 			  </div>
 		  </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkout Date :</label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cout_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cout_date" value="<?=$cout_date; ?>" required >
 			  </div>
 		  </div>
          <!-- Actions --> 
