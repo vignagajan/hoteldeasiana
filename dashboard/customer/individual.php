@@ -41,7 +41,7 @@
 
 		
 		<!-- Form Start -->
-        <form action="individual_action.php" method="post" enctype="multipart/form-data">
+        <form action="actions/individual_action.php" method="post" enctype="multipart/form-data">
           <input type="hidden" name="g_id" value="<?= $g_id; ?>">
           <div class="form-group">
             <input type="text" name="nic" value="<?= $nic; ?>" class="form-control" placeholder="Enter Individual's NIC" required>
@@ -52,24 +52,24 @@
 		  <div class="form-group">
 			<label>Individual's Gender : &nbsp; &nbsp;</label>
       <div class="form-check">
-			  <input class="form-check-input" type="radio" name="fh_gender" value="M" checked="">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="M" <?php echo($gender == 'M' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender" >Male &emsp;&emsp;</label>
-			  <input class="form-check-input" type="radio" name="fh_gender" value="F">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="F" <?php echo($gender == 'F' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender">Female &emsp;&emsp;</label>
-			  <input class="form-check-input" type="radio" name="fh_gender" value="O">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="O" <?php echo($gender == 'O' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender">Other</label>
 			</div>
       </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkin Date : &nbsp; </label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cin_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cin_date" value="<?=$cin_date; ?>" required >
 			  </div>
 		  </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkout Date :</label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cout_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cout_date" value="<?=$cout_date; ?>" required >
 			  </div>
 		  </div>
           

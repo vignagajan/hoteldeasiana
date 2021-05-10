@@ -2,7 +2,7 @@
     body {
         background-image:url("../images/login_bg.jpg");
         background-repeat: no-repeat;
-        background-size: cover;  
+        background-size: stretch;  
         background-repeat: no-repeat;
         background-position: center;
 

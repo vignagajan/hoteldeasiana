@@ -66,7 +66,7 @@
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Work start date : &nbsp; </label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "ws_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "ws_date" value="<?= $ws_date; ?>" required >
 			  </div>
 		  </div>
           

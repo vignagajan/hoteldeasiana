@@ -18,14 +18,20 @@
                     </a>
                 </div>
                 <div class="nav__list">
-                    <a href="<?php echo ($page == "Dashboard" ? "customer/index.php" : "index.php")?>" class="nav__link <?php echo ($page == "Customer" ? "active" : "")?>">
+                    <a href="<?php echo ($page == "Dashboard" ? "customer/index.php" : "../customer/index.php")?>" class="nav__link <?php echo ($page == "Customer" ? "active" : "")?>">
                         <ion-icon name="people-outline" class="nav__icon"></ion-icon>
                         <span class="nav__name">Customer</span>
                     </a>
                 </div>
+                <div class="nav__list">
+                    <a href="<?php echo ($page == "Dashboard" ? "staff/index.php" : "../staff/index.php")?>" class="nav__link <?php echo ($page == "Staff" ? "active" : "")?>">
+                        <ion-icon name="construct-outline" class="nav__icon"></ion-icon>
+                        <span class="nav__name">Staff</span>
+                    </a>
+                </div>
             </div>
 
-            <a href="../logout.php" class="nav__link">
+            <a href="<?php echo ($page == "Dashboard" ?"../logout.php" : "../../logout.php")?>" class="nav__link" onclick="return confirm('Are you sure you want to log out?');">
                 <ion-icon name="log-out-outline" class="nav__icon"></ion-icon>
                 <span class="nav__name">Log Out</span>
             </a>

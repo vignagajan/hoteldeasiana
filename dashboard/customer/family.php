@@ -51,25 +51,25 @@ if(!isset($_SESSION['username']))
           </div>
 		  <div class="form-group">
 			<label>Family Head's Gender : &nbsp; &nbsp;</label>
-			<div class="form-check">
-			  <input class="form-check-input" type="radio" name="fh_gender" value="M" checked="">
+      <div class="form-check">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="M" <?php echo($fh_gender == 'M' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender" >Male &emsp;&emsp;</label>
-			  <input class="form-check-input" type="radio" name="fh_gender" value="F">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="F" <?php echo($fh_gender == 'F' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender">Female &emsp;&emsp;</label>
-			  <input class="form-check-input" type="radio" name="fh_gender" value="O">
+			  <input class="form-check-input" type="radio" name="fh_gender" value="O" <?php echo($fh_gender == 'O' ? 'checked=""' : "");?> >
 			  <label class="form-check-label" for="fh_gender">Other</label>
 			</div>
           </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkin Date : &nbsp; </label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cin_date" value="<?=$cin_date; ?>" required >
+			  <input class="form-control" type="date" name = "cin_date" value="<? echo($update == true ? $cin_date : date('Y-m-d')); ?>" required >
 			  </div>
 		  </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkout Date :</label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cout_date" value="<?=$cout_date; ?>" required >
+			  <input class="form-control" type="date" name = "cout_date" value="<? echo($update == true ? $cout_date : date('Y-m-d')); ?>"  required >
 			  </div>
 		  </div>
          <!-- Actions --> 

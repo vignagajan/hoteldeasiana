@@ -53,16 +53,16 @@
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkin Date : &nbsp; </label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cin_date" value="<? date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cin_date" value="<? echo(update == true ? $cin_date : date('Y-m-d')); ?>" required >
 			  </div>
 		  </div>
 		  <div class="form-group row">
 			  <label >&nbsp; &nbsp;&nbsp;Checkout Date :</label>
 			  <div class = "col-12">
-			  <input class="form-control" type="date" name = "cout_date" value="<?  date('Y-m-d'); ?>" required >
+			  <input class="form-control" type="date" name = "cout_date" value="<? echo(update == true ? $cout_date : date('Y-m-d')); ?>"  required >
 			  </div>
 		  </div>
-          
+
           <div class="form-group">
             <?php if ($update == true) { ?>
             <input type="submit" name="update" class="btn btn-success btn-block" value="Update Company" >
